@@ -1,0 +1,88 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Technologies used: NodeJS, Express & MongoDB",
+        "version": "1.0.0",
+        "title": "This is a OTT Application"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/user/createUser": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Create new user",
+                "description": "",
+                "operationId": "Enter details",
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Enter details",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "username": {
+                                    "type": "string"
+                                },
+                                "email": {
+                                    "type": "string"
+                                },
+                                "phone": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/user/authenticate": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "user authenticate",
+                "description": "",
+                "operationId": "get authenticate",
+                "produces": [
+                    "application/json",
+                    "application/xml"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "verify user",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        }
+    }
+}
