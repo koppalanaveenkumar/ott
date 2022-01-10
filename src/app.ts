@@ -8,7 +8,7 @@ import HealthCheckRouter from './routes/healthcheck.route'
 const formData = require('express-form-data');
 import UserRouter from './routes/user.route';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from '../swagger.json'
+import swaggerDocument from './swagger.json'
 
 export default class App {
     public app: express.Application = express();
